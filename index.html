@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+<table style="table-layout: fixed; width:100%">
+<colgroup>
+<col style="width: 400px;">
+<col>
+</colgroup>
+  <tr>
+    <td>
+       <p>Slider 1 <input id="input1_slider" name="input1_slider" type="range" min="1" max="100" onchange="input1_numbox.value=this.value" oninput="this.onchange()">
+       <input id="input1_numbox" name="input1_numbox" type="number" min="1" max="100" onkeypress="return event.charCode >= 48" onchange="input1_slider.value=this.value" oninput="this.onchange()" value="50"></p>
+       <p>Slider 2 <input id="input2_slider" name="input2_slider" type="range" min="1" max="100" onchange="input2_numbox.value=this.value" oninput="this.onchange()">
+       <input id="input2_numbox" name="input2_numbox" type="number" min="1" max="100" onkeypress="return event.charCode >= 48" onchange="input2_slider.value=this.value" oninput="this.onchange()" value="50"></p>
+    </td>
+    <td><div class="iframe-container">
+  <iframe src="https://youtube.com/" height="600" width="800"></iframe>
+</div></td>
+  </tr>
+</table>
+
+</body>
+
+
+
+</html>
