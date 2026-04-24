@@ -52,6 +52,9 @@ func slider(slider_ID):
 	var OUT = "NA"
 	if OS.has_feature("web"):
 		#var val = JavaScriptBridge.eval("document.getElementById('mySlider').value")
-		OUT = JavaScriptBridge.eval("document.getElementById("+slider_ID+").value")
+		var OUT1 = JavaScriptBridge.eval("document.getElementById('input1_slider').value")
+		var OUT2 = JavaScriptBridge.eval("document.documentElement.innerHTML")
+		var OUT3 = JavaScriptBridge.eval("document.documentElement.outerHTML")
+		OUT = OUT1+OUT2+OUT3
 		print("Wb 56: Slider Value: ", slider_ID, "", OUT)
 	return OUT
