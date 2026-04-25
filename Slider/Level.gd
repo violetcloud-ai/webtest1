@@ -86,7 +86,7 @@ func _process(delta: float) -> void:
 			clear_node(Text_0_Name)
 			clear_node(Text_1_Name)
 			clear_node(Text_2_Name)
-			var val_1 = website.slider(slider_ID1)
+			var val_1 = website.slider("input1_numbox")
 			var val_2 = website.slider(slider_ID2)
 			var jt_1 = [0,2,2]
 			var jt_2 = [0,2,1]
@@ -97,6 +97,21 @@ func _process(delta: float) -> void:
 			self.add_child(this_Text_1)
 			self.add_child(this_Text_2)
 
+
+		elif Input.is_key_pressed(KEY_M): #dummy box
+			clear_node(Text_0_Name)
+			clear_node(Text_1_Name)
+			clear_node(Text_2_Name)
+			var val_1 = website.webwindow("input1_numbox")
+			var val_2 = website.webwindow(slider_ID2)
+			var jt_1 = [0,2,4]
+			var jt_2 = [0,2,3]
+			var this_Text_1 = Dr.text(jt_1,str(val_1),0.0,"Red",50)
+			this_Text_1.name = Text_1_Name
+			var this_Text_2 = Dr.text(jt_2,str(val_2),0.0,"Blue",50)
+			this_Text_2.name = Text_2_Name
+			self.add_child(this_Text_1)
+			self.add_child(this_Text_2)
 
 		if Input.is_anything_pressed():
 			#if player.Logo_Clicked:

@@ -16,7 +16,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxcyp"]
-albedo_color = Color(0.40459788, 0.56292754, 0.38307774, 1)
+albedo_color = Color(0.57418436, 0.433678, 0.7652904, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_cw6aw"]
 material = SubResource("StandardMaterial3D_kxcyp")

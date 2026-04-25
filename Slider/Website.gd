@@ -52,9 +52,27 @@ func slider(slider_ID):
 	var OUT = "NA"
 	if OS.has_feature("web"):
 		#var val = JavaScriptBridge.eval("document.getElementById('mySlider').value")
-		var OUT1 = JavaScriptBridge.eval("document.getElementById('input1_slider').value")
-		var OUT2 = JavaScriptBridge.eval("document.documentElement.innerHTML")
-		var OUT3 = JavaScriptBridge.eval("document.documentElement.outerHTML")
-		OUT = OUT1+OUT2+OUT3
+		OUT = JavaScriptBridge.eval("document.getElementById("+slider_ID+").value")
 		print("Wb 56: Slider Value: ", slider_ID, "", OUT)
 	return OUT
+
+
+
+
+func webwindow(slider_ID): 
+	var  OUT = "NA"
+	if OS.has_feature("web"):
+		var window = JavaScriptBridge.get_interface("window")
+		# Access the parent document directly
+		var parent_doc = window.parent.document
+		var my_element = parent_doc.getElementById(slider_ID).value
+		OUT += my_element #"try this" #parent_doc my_element + 
+	return  OUT
+		#return parent_doc
+		# Manipulate the element
+		#var my_element = parent_doc.getElementById("element-id")
+		#if my_element:
+			#my_element.innerText = "Cool"
+	
+
+	
